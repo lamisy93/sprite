@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Feuille de sprite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        *{margin: 0;
+        padding: 0}
+
+        .reseaux{height: 50px;
+        margin: auto;
+        width: 150px;}
+
+        ul.logo{display: block;
+        list-style: none
+        }
+
+        ul.logo li a {display: block;
+        height: 50px;
+        background: url(./sprite.gif) 0 0 no-repeat;
+        float: left;
+        text-indent: -3000px /* pour cacher les écritures des images, mieux pour le referencement */
+        }
+
+        ul.logo li#telegram a {
+            width: 50px;
+            transition: 1s;
+            background-position: 0px 0px /* siginifie l'emplacement en haut à gauche de l'image en background / abscisse : droite gauche - x / ordonné : haut bas - y*/
+        }
+
+        ul.logo li#whatsapp a {
+            width: 50px;
+            transition: 1s;
+            background-position: -50px 0px /* siginifie l'emplacement en haut à gauche de l'image en background */
+        }
+
+        ul.logo li#linkedin a {
+            width: 50px;
+            transition: 1s;
+            background-position: -100px 0px /* siginifie l'emplacement en haut à gauche de l'image en background */
+        }
+
+        ul.logo li#telegram a:hover {
+            width: 50px;
+            background-position: 0px -50px /* siginifie l'emplacement en haut à gauche de l'image en background / abscisse : droite gauche - x / ordonné : haut bas - y*/
+        }
+
+        ul.logo li#whatsapp a:hover {
+            width: 50px;
+            background-position: -50px -50px /* siginifie l'emplacement en haut à gauche de l'image en background */
+        }
+
+        ul.logo li#linkedin a:hover {
+            width: 50px;
+            background-position: -100px -50px /* siginifie l'emplacement en haut à gauche de l'image en background */
+        }
+        
+        ul.logo li#telegram a:active{
+            width: 50px;
+            filter: sepia(1);
+            background-position: 0px 0px /* siginifie l'emplacement en haut à gauche de l'image en background / abscisse : droite gauche - x / ordonné : haut bas - y*/
+        }
+
+        ul.logo li#whatsapp a:active {
+            width: 50px;
+            filter: sepia(1);
+            background-position: -50px 0px /* siginifie l'emplacement en haut à gauche de l'image en background */
+        }
+
+        ul.logo li#linkedin a:active {
+            width: 50px;
+            filter: sepia(1);
+            background-position: -100px 0px /* siginifie l'emplacement en haut à gauche de l'image en background */
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="reseaux">
+        <ul class="logo">
+            <li id="telegram"><a href="">Telegram</a></li>
+            <li id="whatsapp"><a href="">Whatsapp</a></li>
+            <li id="linkedin"><a href="">Linkedin</a></li>
+        </ul>
+
+    </nav>
+</body>
+</html>
